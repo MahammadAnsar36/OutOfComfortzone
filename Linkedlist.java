@@ -45,6 +45,13 @@ public class Linkedlist {
         }
         return slow;
     }
+    public static void display(){
+        Node temp=head;
+        while (temp!=null) {
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+    }
     public Node merge(Node head1,Node head2){
         Node mergeLL=new Node(-1);
         Node temp=mergeLL;
@@ -83,26 +90,37 @@ public class Linkedlist {
 
         return merge(leftHalf,rightHalf);
     }
+    public static void reverse(){
+        Node prev=null;
+        Node curr=head;
+        Node next=null;
+        while (curr!=null) {
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+        head=prev;
+    }
+    
     public static void main(String[] args) {
-        // Linkedlist ll =new Linkedlist();
-        // // ll.add(0, 5);
+        Linkedlist ll =new Linkedlist();
 
-        // ll.addfirst(7);
-        // ll.add(0, 2);
-        // ll.add(1, 9);
-        // Node t=head;
-        // while (t.next!=null) {
-        //     System.out.print(t.data+" ");
-        //     t=t.next;
-        // }
-        // System.out.println("null"); 
-        LinkedList<Integer> ll =new LinkedList<>();
-        ll.addFirst(4);
-        ll.addFirst(6);
-        ll.addFirst(1);
-        ll.addFirst(8);
-        ll.addFirst(3);
-        System.out.println(ll);
+        ll.add(0,1);
+        ll.add(1, 2);
+        ll.add(2, 9);
+        // display();
+        reverse();
+        display();
+        System.out.println("null"); 
+        
+        // LinkedList<Integer> ll =new LinkedList<>();
+        // ll.addFirst(4);
+        // ll.addFirst(6);
+        // ll.addFirst(1);
+        // ll.addFirst(8);
+        // ll.addFirst(3);
+        // System.out.println(ll);
         
 
     }
