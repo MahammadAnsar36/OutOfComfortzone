@@ -1,4 +1,4 @@
-package OutOfComfortzone;
+// package OutOfComfortzone;
 import java.util.*;
 public class Stsa {
     public static void main(String args[]){

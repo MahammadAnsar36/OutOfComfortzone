@@ -75,23 +75,4 @@
 //         System.out.println(isPal(x));
 //     }
 // }
-package OutOfComfortzone;
-public class Arraylist {
-    public static void main(String[] args) {
-    int n = 200;
-     static boolean two(int n){
-        if(n<0){
-            return false;
-        }
-        while(n%2==0){
-            n=n/2;
-        }
-        if(n==1){
-            return true;
-        }else{
-            return false;
-        }
-      }
-    System.out.println(two(n));
-   }
-}
+// package OutOfComfortzone;

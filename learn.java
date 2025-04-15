@@ -1,4 +1,4 @@
-package OutOfComfortzone;
+// package OutOfComfortzone;
 
 import java.util.Scanner;
 
